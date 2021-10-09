@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Queries>
+	<AdminRegister>
+		<![CDATA[
+		INSERT INTO Admin (Name, Mobile, Email,Password,Gender, DoB,IsActive,Role)  VALUES (@Name,@Mobile,@Email,@Password,@Gender,@DoB,@IsActive,@Role);		
+
+	]]>
+	</AdminRegister>
+	
+		<AdminLogin>
+		<![CDATA[
+				SELECT * FROM Admin  WHERE (Email=@Email AND Password=@Password AND Role=@Role)
+	]]>
+		</AdminLogin>
+
+	<RegisterUserEcom>
+		<![CDATA[
+		INSERT INTO UserTable(Name, Mobile, Email,Password,Gender, DoB,IsActive,Role)  VALUES (@Name,@Mobile,@Email,@Password,@Gender,@DoB,@IsActive,@Role);		
+
+	]]>
+	</RegisterUserEcom>
+
+	
+	<LoginUserEcom>
+		<![CDATA[
+				SELECT * FROM UserTable  WHERE (Email=@Email AND Password=@Password AND Role=@Role)
+	]]>
+	</LoginUserEcom>
+	
+</Queries>
